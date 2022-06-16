@@ -19,7 +19,7 @@ type BoughtCurrency = {
 const initialState: InitialState = {
   favourites: {},
   boughtCurrency: {
-    loading: true,
+    loading: false,
     name: '',
     amount: '',
     status: '',

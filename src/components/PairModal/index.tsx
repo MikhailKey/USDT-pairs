@@ -123,13 +123,13 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
         <Grid container spacing={2}>
           <Grid item xs={6}>
             <Item>
-              1 {pair.base} = {Number(data?.leftPrice).toFixed(4)}{' '}
+              1 {pair.base} = {Number(data?.leftPrice).toFixed(5)}{' '}
               {pair.counter}
             </Item>
           </Grid>
           <Grid item xs={6}>
             <Item>
-              1 {pair.counter} = {(1 / Number(data?.leftPrice)).toFixed(4)}{' '}
+              1 {pair.counter} = {(1 / Number(data?.leftPrice)).toFixed(5)}{' '}
               {pair.base}
             </Item>
           </Grid>

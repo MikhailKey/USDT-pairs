@@ -32,7 +32,7 @@ const Header = () => {
   const { loading = false, status = '' } = useAppSelector(boughtCurrencySelect);
   return (
     <>
-      <AppBar position="fixed">
+      <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: 'flex' }}>

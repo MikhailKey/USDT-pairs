@@ -38,8 +38,8 @@ function App() {
           <Header />
           <div className="container app-wrap">
             <Routes>
-              <Route path="/USDT-pairs/" element={<Pairs />} />
-              <Route path="/USDT-pairs/favorites" element={<Favorites />} />
+              <Route path="/" element={<Pairs />} />
+              <Route path="/favorites" element={<Favorites />} />
             </Routes>
           </div>
         </div>

@@ -33,10 +33,18 @@ const storeSlice = createSlice({
     setFavourites: (state, { payload }) => {
       const uniqueId = `${payload.base}/${payload.counter}`;
       let alreadyInFavorites = state.favourites[uniqueId]?.counter;
+      if (alreadyInFavorites) {
+        delete state.favourites[uniqueId];
+        state.favourites = {
+          ...state.favourites
+        }
+        return;
+
+      }
 
       state.favourites = {
         ...state.favourites,
-        [uniqueId]: alreadyInFavorites ? false : payload,
+        [uniqueId]: payload,
       };
     },
     setBoughtCurrency: (state, { payload }) => {

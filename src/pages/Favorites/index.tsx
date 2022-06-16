@@ -15,19 +15,18 @@ const Favorites: React.FC = () => {
 
     if (favoritesKeys?.length) {
       setFavorites(favoritesKeys);
+    } else {
+      setFavorites(null);
     }
   }, [storeFavorites]);
 
-  const emptyList = useMemo(() => {
-    return favorites !== null && favorites.every(item => !item);
-  }, [favorites]);
 
   return (
     <>
       <div className="favorites-title">
         <Typography variant="h4">Favorites</Typography>
       </div>
-      {favorites?.length && !emptyList ? (
+      {favorites?.length ? (
         <PairsList pairs={favorites} />
       ) : (
         <Typography variant="h6">No favorites for now</Typography>

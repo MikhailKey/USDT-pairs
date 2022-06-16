@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/USDT-pairs/static/css/main.bea400f3.css",
-    "main.js": "/USDT-pairs/static/js/main.5c44bf17.js",
+    "main.js": "/USDT-pairs/static/js/main.c2297ec5.js",
     "index.html": "/USDT-pairs/index.html",
     "main.bea400f3.css.map": "/USDT-pairs/static/css/main.bea400f3.css.map",
-    "main.5c44bf17.js.map": "/USDT-pairs/static/js/main.5c44bf17.js.map"
+    "main.c2297ec5.js.map": "/USDT-pairs/static/js/main.c2297ec5.js.map"
   },
   "entrypoints": [
     "static/css/main.bea400f3.css",
-    "static/js/main.5c44bf17.js"
+    "static/js/main.c2297ec5.js"
   ]
 }

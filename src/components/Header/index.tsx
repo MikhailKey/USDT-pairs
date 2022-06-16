@@ -32,10 +32,10 @@ const Header = () => {
   const { loading = false, status = '' } = useAppSelector(boughtCurrencySelect);
   return (
     <>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+            <Box sx={{ flexGrow: 1, display: 'flex' }}>
               {pages.map(page => (
                 <NavLink
                   to={page.path}
@@ -45,9 +45,7 @@ const Header = () => {
                       'header-link__active': isActive,
                     })
                   }>
-                  <Button sx={{ my: 2, color: 'white', display: 'block' }}>
-                    {page.value}
-                  </Button>
+                  <Button sx={{ color: 'white' }}>{page.value}</Button>
                 </NavLink>
               ))}
             </Box>

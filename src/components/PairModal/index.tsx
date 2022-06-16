@@ -111,6 +111,7 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
   const totalCost = useMemo(() => {
     return (Number(value) * (Number(data?.leftPrice) || 0)).toFixed(1);
   }, [value]);
+
   return (
     <Modal open={open} onClose={onClose}>
       <Box sx={style}>

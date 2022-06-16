@@ -13,8 +13,12 @@ const Stats: React.FC<Props> = ({ stat }) => {
   const color = stat < 0 ? red : green;
   return (
     <div className="stats-wrap">
-      {stat < 0 ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
-      <Typography variant="body1">{stat}%</Typography>
+      {stat < 0 ? (
+        <ArrowDropDownIcon style={{ color: red[500] }} />
+      ) : (
+        <ArrowDropUpIcon style={{ color: green[500] }} />
+      )}
+      <Typography style={{ color: color[500]}} variant="body1">{stat}%</Typography>
     </div>
   );
 };

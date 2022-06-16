@@ -14,7 +14,7 @@ const TableSkeleton: React.FC = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell className="pairs-arrowcell"/>
+            <TableCell className="pairs-arrowcell" />
             <TableCell component="th" scope="row" align="left">
               Pair name
             </TableCell>

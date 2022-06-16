@@ -20,7 +20,6 @@ const Favorites: React.FC = () => {
     }
   }, [storeFavorites]);
 
-
   return (
     <>
       <div className="favorites-title">

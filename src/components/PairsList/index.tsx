@@ -121,6 +121,7 @@ const PairsList: React.FC<Props> = ({ pairs }) => {
   const handleChangeTargetPair = (pair: Pair) => {
     setTargetPair(pair);
   };
+
   return (
     <>
       {targetPair && (

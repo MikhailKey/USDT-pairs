@@ -36,10 +36,9 @@ const storeSlice = createSlice({
       if (alreadyInFavorites) {
         delete state.favourites[uniqueId];
         state.favourites = {
-          ...state.favourites
-        }
+          ...state.favourites,
+        };
         return;
-
       }
 
       state.favourites = {

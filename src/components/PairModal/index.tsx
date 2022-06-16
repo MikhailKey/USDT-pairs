@@ -53,7 +53,8 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
     null
   );
 
-  const buyCurrency = async () => {
+  const buyCurrency = async (e: React.SyntheticEvent) => {
+    e.preventDefault()
     if (!value.length) {
       return setError('Field must not be empty');
     }
@@ -193,38 +194,43 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
               </div>
             </Item>
           </Grid>
-          <Grid item xs={12}>
-            <Typography variant="subtitle1">Buy {pair.base}</Typography>
-          </Grid>
-          <Grid item xs={8}>
-            <TextField
-              error={!!error}
-              helperText={error}
-              onChange={handleChange}
-              value={value}
-              type="number"
-              fullWidth
-              color="secondary"
-              label={`Enter the amount of ${pair.base}`}
-              variant="outlined"
-            />
-          </Grid>
-          <Grid item xs={4}>
-            <Button
-              className="pair-modal-button"
-              variant="contained"
-              fullWidth
-              color="secondary"
-              onClick={buyCurrency}>
-              Buy
-            </Button>
-          </Grid>
-          <Grid item xs={4}>
-            <Typography variant="subtitle1">
-              Total cost: {totalCost} USDT
-            </Typography>
-          </Grid>
         </Grid>
+        <form onSubmit={buyCurrency}>
+          <Grid container spacing={2}>
+            <Grid item xs={12}>
+              <Typography variant="subtitle1">Buy {pair.base}</Typography>
+            </Grid>
+            <Grid item xs={8}>
+              <TextField
+                error={!!error}
+                helperText={error}
+                onChange={handleChange}
+                value={value}
+                type="number"
+                fullWidth
+                color="secondary"
+                label={`Enter the amount of ${pair.base}`}
+                variant="outlined"
+              />
+            </Grid>
+            <Grid item xs={4}>
+              <Button
+                className="pair-modal-button"
+                variant="contained"
+                type="submit"
+                fullWidth
+                color="secondary"
+              >
+                Buy
+              </Button>
+            </Grid>
+            <Grid item xs={4}>
+              <Typography variant="subtitle1">
+                Total cost: {totalCost} USDT
+              </Typography>
+            </Grid>
+          </Grid>
+        </form>
       </Box>
     </Modal>
   );

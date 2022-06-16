@@ -1,0 +1,13 @@
+.pair-modal-title {
+  margin-bottom: 20px;
+}
+
+.pair-modal-coin {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pair-modal-button {
+  height: 100%;
+}

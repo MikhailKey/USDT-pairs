@@ -19,6 +19,7 @@ import { favouritesSelect, toggleFavorite } from '../../store/storeSlice';
 import PairModal from '../PairModal';
 import { useAppDispatch, useAppSelector } from '../../store';
 import { TablePagination } from '@mui/material';
+import './pairs-list.css';
 
 type RowProps = {
   row: Pair;
@@ -45,7 +46,7 @@ const Row: React.FC<RowProps> = ({ row, onOpenModal, onPairClick }) => {
   return (
     <React.Fragment>
       <TableRow>
-        <TableCell>
+        <TableCell className="pairs-arrowcell">
           <IconButton size="small" onClick={() => setOpen(!open)}>
             {open ? (
               <KeyboardArrowUpIcon color="warning" />

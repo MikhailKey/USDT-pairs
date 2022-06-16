@@ -14,7 +14,7 @@ const TableSkeleton: React.FC = () => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell />
+            <TableCell className="pairs-arrowcell"/>
             <TableCell component="th" scope="row" align="left">
               Pair name
             </TableCell>
@@ -25,7 +25,7 @@ const TableSkeleton: React.FC = () => {
             <TableRow
               key={idx}
               sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-              <TableCell component="th" scope="row">
+              <TableCell component="th" scope="row" className="pairs-arrowcell">
                 <Skeleton animation="wave" height={40} />
               </TableCell>
               <TableCell component="th" scope="row">

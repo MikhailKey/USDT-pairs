@@ -18,7 +18,7 @@ const darkTheme = createTheme({
     secondary: {
       main: '#7c61b0',
     },
-    divider: grey[800],
+    divider: grey[600],
     background: {
       default: '#2a4b57',
       paper: '#2a4b57',

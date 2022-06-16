@@ -1,0 +1,8 @@
+.pairs-clickcell {
+    cursor: pointer;
+}
+
+.pairs-arrowcell {
+    max-width: 100px;
+    width: 100px;
+}

@@ -110,7 +110,7 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
   };
 
   const totalCost = useMemo(() => {
-    return (Number(value) * (Number(data?.leftPrice) || 0)).toFixed(1);
+    return (Number(value) * (Number(data?.leftPrice) * (1 - Number(pair.fee)) || 0)).toFixed(1);
   }, [value]);
 
   return (
@@ -226,6 +226,7 @@ const PairModal: React.FC<Props> = ({ open, onClose, pair }) => {
             </Grid>
             <Grid item xs={4}>
               <Typography variant="subtitle1">
+
                 Total cost: {totalCost} USDT
               </Typography>
             </Grid>
